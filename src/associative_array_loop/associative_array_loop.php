@@ -38,5 +38,4 @@ function associative_array_definition($input) {
 }
     //関数を実行
     associative_array_definition(['melon']);
-
 ?>
