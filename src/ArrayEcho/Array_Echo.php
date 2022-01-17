@@ -16,41 +16,25 @@ $color = array(
 );
 echo $color['banana'],PHP_EOL;
 
-//多次元配列
-$test = array(
-    'apple' => array(
+//二次元配列
+//二次元配列の連想配列の特定の要素を出力
+//echo [外側の配列(要素は配列であればインデックス、連想配列であれば指定してるキーの値)]
+//echo [ネストされた配列(要素は配列であればインデックス、連想配列であれば指定してるキーの値)]
+$test = [
+    'apple' => [
         'price' => 100,
         'count' => 1,
-    ),
-    'orange' => array(
+    ],
+    'orange' => [
         'price' => 200,
         'count' => 2
-    ),
-    'banana' => array(
+    ],
+    'banana' => [
         'price' => 111,
         'count' => 3,
-    ),
-);
-var_dump($test);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    ]
+];
+echo $test['apple']['price'] . PHP_EOL;
+echo $test['orange']['count'] . PHP_EOL;
 
 ?>

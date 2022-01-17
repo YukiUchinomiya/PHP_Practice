@@ -1,0 +1,50 @@
+しゅんさんレビュー
+1 . associative_array_definitionで引数は（apple or banana or melon）
+-> まずここで渡しているのがarrayな時点で謎
+2 . color の配列をforで回して引数で指定した値と合致したら
+-> $colorをforで回せてない
+3 . 色（red or yellow or green）を returnして画面に出力
+-> returnする前に出力しているけど、求めているのはassociative_array_definitionの返り値を受け取ってから外で表示
+
+function associative_array_definition($input) {
+    //$colorに連想配列（3つ）のデータを代入。(今回想定している値で使用する配列は'melon' => 'green')
+    $color = [    # 変わらない定義だから定数にするべき
+        'apple' => 'red',
+        'banana' => 'yellow',
+        'melon' => 'green',
+    ];
+    //変数に想定しているkey(melon)を代入
+    $input = $color['melon']; #  input使おう  $color['melon'] で"green" を受け取って何がしたいか謎
+    //引数で指定した値と一致したら戻り値でgreenを出力
+    //forで$iをの初期値0を用意。。$iが＄colorに格納されている配列の数以下の場合は＄iにインクリメント
+    for ($i =0; $i < count($color); $i++){ # 連想配列? mapとかdictionaryのkey valueだけど、phpでなんて呼ぶかは知らない. ただkeyをスマートに回す方法あるはず
+        //もし想定している$colorのkey(melon)とforで回している$inputのkeyが一致してればtrue
+        if($color['melon'] == $input[$i]){  # もはや謎 inputの中身がmelonはfunctionの予備出し時に確定しいてそのinputとkeyが同じ時に中身のgreenを呼び出してreturnしよう
+            //returnで想定しているデータを$inputに返す
+            echo $input[$i];  # functionの外でechoしよう
+            return $input[$i];  # inputから取り出すのが謎 colorから取り出そう
+        }
+    }
+    //string(5) "green"が出力
+    var_dump($input);  # これは何用???keyがマッチしなかった時用?
+}
+    //関数を実行
+    associative_array_definition(['melon']); # なんでarray?
+
+長嶋さんレビュー
+・Array_Echo.php
+配列にアクセスするのが目的なら、2次元配列をvar_dumpで出力しても意味が無い
+・Loop_Echo.php
+> forで整数1~10を1から順に改行して出力する処理
+forで1～10を処理するのに、loopを0から11回、回している
+> forで九九を格段で改行して出力する処理
+「エクセルの行と列をイメージ」と書いてあるのに、全ての値が1行ずつ出力されている
+ ⇒ この九九の表を綺麗に作るのは練習問題として最適
+・string_concatenation.php
+> 変数内で代入に使用する変数($str)を連結
+コメントが意味不明なので、しっかり書く
+・associative_array_loop.php
+> 5.returnで一致しているvalue(今回の場合はgreen)をechoで出力
+echoで出力せず、var_dumpしてるのは何故？
+returnしてるのだから、予備元で戻り値受けてechoするのが正しい
+関数を呼ぶコードなので、例えば「grape」等を渡して取れなかった場合も試す
