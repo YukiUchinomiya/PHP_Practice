@@ -7,36 +7,34 @@
 // 色（red or yellow or green）を returnして画面に出力
 
 // 処理の流れ
-// 1.メソッド($associative_array_loop)を引数($input)を指定して作成
-// 2.定数COLORに連想配列を宣言
-// 3.
-// 4.
-// 5.
+// 1.メソッド($array_loop)を引数($input)を指定して作成
+// 2.定数COLORSに連想配列を宣言
+// 3.foreachでCOLORSをループ処理で行い、もし関数の引数の$inputの文字列とCOLORSのキーの値の文字列が一致していれば条件に沿ったkeyの＄valueを返す
+// 4.引数にkeyと一致する文字列を渡した関数を変数に代入して、その変数をechoで画面に出力
 
 //想定している連想配列の値をループ処理で画面に出力する処理
 function associative_array_loop($input) {
-    //定数のCOLORに連想配列（3つ）のデータを代入。(今回処理で使用するデータは'melon' => 'green')
-    define('COLOR', array(
+    //定数のCOLORSに連想配列（3つ）のデータを代入
+    define("COLORS", array(
         'apple'=>'red',
-        'melon'=>'green',
         'banana'=>'yellow',
+        'melon'=>'green',
       ));
 
-    //引数で指定した値と一致したら戻り値でgreenを出力
-    //forで$iをの初期値0を用意。。$iが＄colorに格納されている配列の数以下の場合は＄iにインクリメント
-    for ($i =0; $i < count($color); $i++){
-        //もし想定している$colorのkey(melon)とforで回している$inputのkeyが一致してればtrue
-        if($color['melon'] == $input[$i]){
-            //returnで想定しているデータを$inputに返す
-            echo $input[$i];
-            return $input[$i];
+      foreach(COLORS as $key => $value){
+        if($input === $key){
+            return $value;
         }
     }
-    //string(5) "green"が出力
-    var_dump($input);
 }
-    //関数を実行
-    associative_array_definition(['melon']);
+//関数の外
+    $loopecho = associative_array_loop('melon');
+    echo $loopecho;
+
+//関数実行した際(テスト)の引数パターン
+//appleで実行した場合、redが出力
+//bananaで実行した場合、yellowが出力
+//melonで実行した場合、greenが出力
+//grep(連想配列に定義されていない値)で実行した場合、何も出力されない
 
 ?>
-
