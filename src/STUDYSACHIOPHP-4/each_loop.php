@@ -1,5 +1,5 @@
 <?php
-    //前の課題でforeach使用したので簡単に自分で考えた処理を記載。
+    //前の課題でforeach使用したので自分で考えた処理を記載。
     //復習
     //TODO:作業途中
     $vegetable = array(
@@ -7,8 +7,12 @@
         'cabbage' => '100円',
         'carrots' => '200円',
     );
+
+    $lowprice = array_map('intval', $vegetable);
     //キーと値をループ処理で回してechoで出力
-        foreach($vegetable as $veg => $price){
-             echo "$veg は $price です" . PHP_EOL;
-            }
+    //各野菜の値段を50円引きで出力
+    foreach($lowprice as $veg => $price){
+        $price = $price - 50;
+        echo "$veg は $price です" . PHP_EOL;
+    }
 
