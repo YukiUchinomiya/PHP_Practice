@@ -11,7 +11,9 @@
 // 120
 
 //再帰呼び出しと階乗の計算の関数
-//TODO::作業途中
+//fact関数の中でifの条件に当てはまった値であればfact関数の引数$iを-1してfact関数を呼んで
+//さらにまた呼んだfact関数のifの条件に当てはまれば同じ関数をまた呼び出す
+//ifの条件から外れたら　1を返す
 function fact(int $i): int {
     if($i != 0) {
         return $i * fact($i - 1);
@@ -20,4 +22,9 @@ function fact(int $i): int {
 }
 
 //結果を出力
-echo(fact(4) . PHP_EOL);
+// 入力 4 出力 24 (実行して確認済み)
+//4*3*2*1
+echo fact(4) . PHP_EOL;
+// 入力 5 出力 120 (実行して確認済み)
+//5*4*3*2*1
+echo fact(5) . PHP_EOL;
