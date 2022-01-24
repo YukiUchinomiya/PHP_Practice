@@ -21,16 +21,18 @@ echo $msg . PHP_EOL;
 
 // 5.変数$first_nameに「田中」、変数$last_nameに「太郎」を代入し、以下の書式となるようにechoで出力させてください。
 //  1田中 太郎
+//fix: echoで出力している変数を{}で括るように変更
 
 $first_name = "田中";
 $last_name = "太郎";
 
-echo "$first_name $last_name" . PHP_EOL;
+echo "{$first_name} {$last_name}" . PHP_EOL;
 
 // 6変数$valueに10を代入し、変数$valに変数$valueの参照を渡し、$valをechoで出力しなさい。
+//beforeでは参照渡しではなく値渡しだったので参照渡し(=&)を渡すように変更
 $value = 10;
-$val = $value;
-echo $val . PHP_EOL;
+$result =& $value;
+echo $result . PHP_EOL;
 
 // 7変数$hereにヒアドキュメントを利用し、改行ありの文字列を代入し、$hereをechoで出力しなさい。
 $here = <<<EOM
