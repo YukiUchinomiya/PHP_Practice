@@ -15,18 +15,22 @@ function change_value ($int1, $int2 ) {
 
 change_value(2,3);
 
-//TODO: 作業途中
 // 引数に受け取った値を入れ替える関数を作成し、出力してください。（参照を利用すること）
 // 入力
 // 5,２
 // 出力
 // 2,5
 
-function change_value_2 ($int1, $int2 ) {
+//関数の引数を参照渡し
+//関数内で宣言された引数の値を関数の外でも使用
+//参照渡しなので関数内で定義された変数の値でも関数外で定義された値の値が使用できる
+function change_value_2 (&$int1, &$int2 ) {
+
+    $int1 = 5;
+    $int2 = 2;
 
     list($int1, $int2) = array($int2, $int1);
     echo $int1, "," ,$int2 . PHP_EOL;
-
 }
 
-change_value_2(5,2);
+change_value_2($int1,$int2);
