@@ -3,9 +3,9 @@
     //復習
     //TODO:作業途中
     $vegetable = array(
-        'tomato' => '150円',
-        'cabbage' => '100円',
-        'carrots' => '200円',
+        'tomato' => '150',
+        'cabbage' => '100',
+        'carrots' => '200',
     );
 
     $lowprice = array_map('intval', $vegetable);
@@ -13,6 +13,6 @@
     //各野菜の値段を50円引きで出力
     foreach($lowprice as $veg => $price){
         $price = $price - 50;
-        echo "$veg は $price です" . PHP_EOL;
+        echo "{$veg}は{$price}円です" . PHP_EOL;
     }
 
