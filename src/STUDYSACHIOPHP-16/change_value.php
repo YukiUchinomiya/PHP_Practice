@@ -6,9 +6,16 @@
 // 2,3
 // 出力
 // 3,2
+//fix:指摘事項でswapを使用して値の入れ替えを実装してとの事なので、修正
+
+//想定結果 $int1が3、$int2が2を出力
+//実行結果 $int1が3、$int2が2を出力(想定結果通り)
 function change_value ($int1, $int2 ) {
 
-    list($int1, $int2) = array($int2, $int1);
+    // list($int1, $int2) = array($int2, $int1);
+    $temp = $int1;
+    $int1 = $int2;
+    $int2 = $temp;
     echo $int1, "," ,$int2 . PHP_EOL;
 
 }
@@ -24,13 +31,21 @@ change_value(2,3);
 //関数の引数を参照渡し
 //関数内で宣言された引数の値を関数の外でも使用
 //参照渡しなので関数内で定義された変数の値でも関数外で定義された値の値が使用できる
+//fix:指摘事項でswapを使用して値の入れ替えを実装してとの事なので、修正
+
+//想定結果 $int1が2、$int2が5を出力
+//実行結果 $int1が2、$int2が5を出力(想定結果通り)
+
 function change_value_2 (&$int1, &$int2 ) {
 
     $int1 = 5;
     $int2 = 2;
 
-    list($int1, $int2) = array($int2, $int1);
+    $temp = $int1;
+    $int1 = $int2;
+    $int2 = $temp;
     echo $int1, "," ,$int2 . PHP_EOL;
+
 }
 
 change_value_2($int1,$int2);
