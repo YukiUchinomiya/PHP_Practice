@@ -8,19 +8,21 @@
 // 3,2
 //fix:指摘事項でswapを使用して値の入れ替えを実装してとの事なので、修正
 
-//想定結果 $int1が3、$int2が2を出力
-//実行結果 $int1が3、$int2が2を出力(想定結果通り)
-function change_value ($int1, $int2 ) {
+//想定結果 3,2
+//実行結果 3,2(想定結果通り)
+function change_value ($int1, $int2) {
 
     // list($int1, $int2) = array($int2, $int1);
     $temp = $int1;
     $int1 = $int2;
     $int2 = $temp;
-    echo $int1, "," ,$int2 . PHP_EOL;
 
+    return array($int1,$int2);
 }
 
-change_value(2,3);
+    $hoge = change_value(2,3);
+    echo $hoge[0] . "," . $hoge[1] . PHP_EOL;
+
 
 // 引数に受け取った値を入れ替える関数を作成し、出力してください。（参照を利用すること）
 // 入力
@@ -33,19 +35,22 @@ change_value(2,3);
 //参照渡しなので関数内で定義された変数の値でも関数外で定義された値の値が使用できる
 //fix:指摘事項でswapを使用して値の入れ替えを実装してとの事なので、修正
 
-//想定結果 $int1が2、$int2が5を出力
-//実行結果 $int1が2、$int2が5を出力(想定結果通り)
+//想定結果 2,5
+//実行結果 2,5(想定結果通り)
 
-function change_value_2 (&$int1, &$int2 ) {
+function change_value2 ($int3, $int4) {
 
-    $int1 = 5;
-    $int2 = 2;
+    // list($int1, $int2) = array($int2, $int1);
+    $temp1 = $int3;
+    $int3 = $int4;
+    $int4 = $temp1;
 
-    $temp = $int1;
-    $int1 = $int2;
-    $int2 = $temp;
-    echo $int1, "," ,$int2 . PHP_EOL;
-
+    return array($int3,$int4);
 }
 
-change_value_2($int1,$int2);
+    $hoge1 = change_value2(5,2);
+    echo $hoge1[0] . "," . $hoge1[1] . PHP_EOL;
+
+//全体結果
+// 3,2
+// 2,5
