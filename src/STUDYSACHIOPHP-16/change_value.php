@@ -38,18 +38,20 @@ function change_value ($int1, $int2) {
 //想定結果 2,5
 //実行結果 2,5(想定結果通り)
 
-function change_value2 ($int3, $int4) {
+function change_value2 (&$int3, &$int4) {
 
-    // list($int1, $int2) = array($int2, $int1);
     $temp1 = $int3;
     $int3 = $int4;
     $int4 = $temp1;
 
-    return array($int3,$int4);
 }
 
-    $hoge1 = change_value2(5,2);
-    echo $hoge1[0] . "," . $hoge1[1] . PHP_EOL;
+$int3 = 5;
+$int4 = 2;
+
+change_value2($int3,$int4);
+
+echo "{$int3},{$int4}\n";
 
 //全体結果
 // 3,2
