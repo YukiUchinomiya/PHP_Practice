@@ -21,6 +21,8 @@ $result = array_return(10);
 
 //ここから課題18の追記部分
 //条件としては隣接してる配列の値と比較して順序が逆の場合に値を入れ替える
+//ブランチ追記(pushするブランチ間違えた)
+
 
 //$resultの配列の値をバブルソートする
 function bubble_array ($bu_array){
