@@ -18,6 +18,7 @@ function array_return($input){
 
 //実行した関数の生成
 $result = array_return(10);
+// var_dump($result);
 
 //ここから課題18の追記部分
 //条件としては隣接してる配列の値と比較して順序が逆の場合に値を入れ替える
@@ -31,11 +32,18 @@ function bubble_array ($bu_array){
     for($i = 0; $i < count($bu_array); $i++ ){
         //要素数-1繰り返す
         for($n = 1; $n < count($bu_array); $n++){
-            //ここで隣接してる要素を比較して入れ替える(swap?)
-
+            //ここで隣接してる要素を比較して入れ替える
+            //もし隣接要素を比較し大小が逆なら入替える
+            if($bu_array[$n-1] > $bu_array[$n]){
+            //swapを使用
+                $temp = $bu_array[$n];
+                $bu_array[$n] = $bu_array[$n-1];
+                $bu_array[$n-1] = $temp;
+            }
         }
     }
-  //処理した値を返す
-  return $bu_array;
-
+    return $bu_array;
 }
+
+$bublle_result = bubble_array($result);
+var_dump($bublle_result);
