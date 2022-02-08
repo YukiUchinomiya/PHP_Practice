@@ -83,7 +83,51 @@ var_dump($array);
 // }
 
 // STEP8: STEP7に加え、演算子を受け取った場合の分岐を追加してみる
-echo 'STEP8 Please enter: ';
+//想定している結果が出力されている(想定したcase毎で出力される)
+// echo 'STEP8 Please enter: ';
+// $array_std8 = trim(fgets(STDIN));
+// switch($array_std8){
+//     case '=':
+//         echo '=';
+//         break;
+//     case '.':
+//         echo '.';
+//         break;
+//     case 'c':
+//         echo 'c';
+//         break;
+//     case '+':
+//         echo '+';
+//         break;
+//     case '-':
+//         echo '-';
+//         break;
+//     case '*':
+//         echo '*';
+//         break;
+//     case '/':
+//         echo '/';
+//         break;
+//     case '%':
+//         echo '%';
+//         break;
+//     case '**':
+//         echo '**';
+//         break;
+//     default:
+//     return;
+// }
+
+
+//TODO::作業途中
+// STEP9: STEP8に加え、受け取った演算子で逆ポーランド計算を行ってみる
+//逆ポーランド記法とは先頭から順に値を読んで、算術演算子が現れるまで数字を１つずつ配列に格納すること
+//数字を繰り返し配列に格納していき、入力値が演算子のケースの場合、それまでに格納されていた配列の値を
+//入力された演算子で計算するような仕様の認識
+
+echo 'STEP9 Please enter: ';
+$stack = [];
+$stack = $array_std8;
 $array_std8 = trim(fgets(STDIN));
 switch($array_std8){
     case '=':
@@ -96,29 +140,22 @@ switch($array_std8){
         echo 'c';
         break;
     case '+':
-        echo '+';
-        break;
+        $stack;
     case '-':
-        echo '-';
-        break;
+        $stack;
     case '*':
-        echo '*';
-        break;
+        $stack;
     case '/':
-        echo '/';
-        break;
+        $stack;
     case '%':
-        echo '%';
-        break;
+        $stack;
     case '**':
-        echo '**';
-        break;
+        $stack;
     default:
     return;
+
 }
 
-
-// STEP9: STEP8に加え、受け取った演算子で逆ポーランド計算を行ってみる
 // STEP10: =という文字を受け取った場合に、計算結果を出力してみる
 // STEP11: .という文字を受け取った場合に、処理を終了してみる
 // STEP12: cという文字を受け取った場合に、配列をクリアしてみる
