@@ -21,7 +21,8 @@ while(true){
         //数値以外が入力された場合、数値が格納された配列の数値で計算する
         switch($array_std12){
             case '=':
-                echo "計算結果:" . $array_result  . PHP_EOL;
+                echo "計算結果：";
+                print_r($array_result) . PHP_EOL;
                 break;
             case '.':
                 return;
