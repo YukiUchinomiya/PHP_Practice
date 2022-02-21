@@ -9,14 +9,34 @@
 <body>
 <!--ヘッダー-->
 <header>
-<h1>aaaa</h1>
+    <div class="header_content">
+        <h1 class="header_text">expenses book</h1>
+    </div>
 </header>
 <!--項目、金額入力-->
-<section>
-</section>
+    <main>
+        <section>
+            <div class="form_content">
+                <form action="detail.php" method="post">
+                    <div class="items">
+                        <label class="label">項目</label>
+                        <input class="inputs" type="text" name="name">
+                    </div>
+                    <div class="items">
+                        <label class="label">金額</label>
+                        <input class="inputs" type="email" name="email">
+                    </div>
+                    <div class="items">
+                        <label class="label">メモ</label>
+                        <input class="inputs" type="email" name="email">
+                    </div>
+                </form>
+            </div>
+        </section>
 <!--登録した最新10件を表示-->
-<section>
-</section>
+        <section>
+        </section>
+    </main>
 <script src="js/main.js"></script>
 </body>
 </html>
