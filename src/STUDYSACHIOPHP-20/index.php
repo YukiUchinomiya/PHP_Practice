@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>家計簿アプリ</title>
 </head>
 <body>
@@ -17,24 +17,35 @@
     <main>
         <section>
             <div class="form_content">
+                <h1 class="form_title">項目/金額入力</h1>
                 <form action="detail.php" method="post">
                     <div class="items">
-                        <label class="label">項目</label>
-                        <input class="inputs" type="text" name="name">
+                        <label class="label">項目</label><br>
+                        <input class="inputs" type="text" name="name" placeholder="category">
                     </div>
                     <div class="items">
-                        <label class="label">金額</label>
-                        <input class="inputs" type="email" name="email">
+                        <label class="label">金額</label><br>
+                        <input class="inputs" type="email" name="email" placeholder="0">
                     </div>
                     <div class="items">
-                        <label class="label">メモ</label>
-                        <input class="inputs" type="email" name="email">
+                        <label class="label">メモ</label><br>
+                        <input class="inputs" type="email" name="email" placeholder="memo">
                     </div>
+                    <input type="submit" class="form_button">
                 </form>
             </div>
         </section>
 <!--登録した最新10件を表示-->
         <section>
+            <div class="result_list">
+                <h1 class="result">最新の10件</h1>
+                    <div class="result_title_header"></div>
+                    <ul class="result_title_list">
+                        <li class="result_title_detail">＃</li>
+                        <li class="result_title_detail">項目</li>
+                        <li class="result_title_detail">金額</li>
+                    </ul>
+            </div>
         </section>
     </main>
 <script src="js/main.js"></script>
