@@ -61,11 +61,14 @@ while(true){
                 //値０で割り算を行う場合配列を空にする
                 if($a == 0){
                     $stack = [];
+                    echo "0で除算することはできません。" . PHP_EOL;
                     echo "配列をクリアします。" . PHP_EOL;
-                }else{
-                    $stack[] = $b / $a;
-                break;
+                    break;
                 }
+                    $stack[] = $b / $a;
+                    break;
+            default:
+                echo "入力が不正です。";
         }
     }
     $content = implode(',' , $stack);
