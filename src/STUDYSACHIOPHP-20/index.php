@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>家計簿アプリ</title>
 </head>
 <body>
@@ -40,11 +40,35 @@
             <div class="result_list">
                 <h1 class="result">最新の10件</h1>
                     <div class="result_title_header"></div>
-                    <ul class="result_title_list">
-                        <li class="result_title_detail">＃</li>
-                        <li class="result_title_detail">項目</li>
-                        <li class="result_title_detail">金額</li>
-                    </ul>
+                        <ul class="result_title_list">
+                            <li class="result_title_detail_id">＃</li>
+                            <li class="result_title_detail_item">項目</li>
+                            <li class="result_title_detail_price">金額</li>
+                        </ul>
+                        <ul class="result_text_list">
+                            <li class="result_text_detail_id">1</li>
+                            <li class="result_text_detail_item">食費</li>
+                            <li class="result_text_detail_price">10000</li>
+                            <li class="result_text_detail_button"><input type="submit" class="result_text_detail_button"></li>
+                        </ul>
+                        <ul class="result_text_list">
+                            <li class="result_text_detail_id">2</li>
+                            <li class="result_text_detail_item">食費</li>
+                            <li class="result_text_detail_price">20000</li>
+                            <li class="result_text_detail_button"><input type="submit" class="result_text_detail_button"></li>
+                        </ul>
+                        <ul class="result_text_list">
+                            <li class="result_text_detail_id">3</li>
+                            <li class="result_text_detail_item">食費</li>
+                            <li class="result_text_detail_price">30000</li>
+                            <li class="result_text_detail_button"><input type="submit" class="result_text_detail_button"></li>
+                        </ul>
+                        <ul class="result_text_list">
+                            <li class="result_text_detail_id">4</li>
+                            <li class="result_text_detail_item">食費</li>
+                            <li class="result_text_detail_price">40000</li>
+                            <li class="result_text_detail_button"><input type="submit" class="result_text_detail_button"></li>
+                        </ul>
             </div>
         </section>
     </main>

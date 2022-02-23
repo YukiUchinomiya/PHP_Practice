@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    background-color: rgb(247, 235, 235);
+}
+header{
+    background-color: rgb(235, 129, 8);
+    padding: 1em;
+}
+.header_text{
+    text-align: center;
+}
+.form_title{
+    text-align: center;
+}
+.form_content{
+    text-align: center;
+    font-weight:bold;
+}
+.label{
+    margin-right: 65%;
+}
+.items{
+    margin: 35px;
+}
+.inputs{
+    width: 70%;
+    height: 40px;
+    margin-top: 10px;
+    border:none;
+    border-radius:15px;
+    box-shadow: none;}
+.form_button{
+    margin-right: 60%;
+    width: 70px;
+    height: 40px;
+    border-radius:10px;
+}
+.result{
+    text-align: center;
+}
+.result_list{
+    margin: 40px 0px 60px 0px;
+}
+.result_title_list{
+    list-style-type: none;
+    display: flex;
+    border-bottom:1px solid #666;
+    margin: 0px 150px;
+}
+.result_title_detail_id{
+    margin: 20px 0px;
+    padding: 0px;
+}
+.result_title_detail_item{
+    margin: 20px 200px 20px 20px;
+}
+.result_title_detail_price{
+    margin: 20px 200px;
+}
+.result_text_list{
+    list-style-type: none;
+    display: flex;
+    border-bottom:1px solid #666;
+    margin: 0px 150px;
+}
+.result_text_detail_id{
+    margin: 20px 0px;
+    padding: 0px;
+}
+.result_text_detail_item{
+    margin: 20px 200px 20px 20px;
+    padding: 0px 10px;
+}
+.result_text_detail_price{
+    margin: 20px 180px;
+}
+.result_text_detail_button{
+    margin-top: 5px;
+    margin-left: 18%;
+    width: 65px;
+    height: 35px;
+    border-radius:10px;
+}
