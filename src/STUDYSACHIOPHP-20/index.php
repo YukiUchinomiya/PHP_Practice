@@ -13,29 +13,29 @@
         <h1 class="header_text">expenses book</h1>
     </div>
 </header>
-<!--項目、金額入力-->
+    <!--項目、金額入力-->
     <main>
         <section>
             <div class="form_content">
                 <h1 class="form_title">項目/金額入力</h1>
-                <form action="detail.php" method="post">
+                <form action="index.php" method="POST">
                     <div class="items">
                         <label class="label">項目</label><br>
-                        <input class="inputs" type="text" name="name" placeholder="category">
+                        <input class="inputs" type="text" name="category" placeholder="category">
                     </div>
                     <div class="items">
                         <label class="label">金額</label><br>
-                        <input class="inputs" type="email" name="email" placeholder="0">
+                        <input class="inputs" type="email" name="price" placeholder="0">
                     </div>
                     <div class="items">
                         <label class="label">メモ</label><br>
-                        <input class="inputs" type="email" name="email" placeholder="memo">
+                        <input class="inputs" type="email" name="note" placeholder="memo">
                     </div>
-                    <input type="submit" class="form_button">
+                    <input type="submit" class="form_button" value="登録">
                 </form>
             </div>
         </section>
-<!--登録した最新10件を表示-->
+        <!--登録した最新10件を表示-->
         <section>
             <div class="result_list">
                 <h1 class="result">最新の10件</h1>
@@ -75,3 +75,21 @@
 <script src="js/main.js"></script>
 </body>
 </html>
+
+<?php
+
+    if(!empty($_POST['title' || 'price' || 'memo'])){
+        $category_clm  = 'INSERT INTO items(category) VALUES(:CATE)';
+        $price_clm  = 'INSERT INTO items(price) VALUES(:PRI)';
+        $note_clm  = 'INSERT INTO items(note) VALUES(:N)';
+
+        $stmt = $dbh->prepare($sql);
+
+        $stmt->bindParam(':ONAMAE', $_POST['inputName'], PDO::PARAM_STR);
+        $stmt->execute();
+
+        header('location: http://localhost:8888/');
+    }
+
+    $mysqli = new mysqli("localhost", "root", "root", "expenses_app");
+    echo $mysqli->host_info . "\n";
