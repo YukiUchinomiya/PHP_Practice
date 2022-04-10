@@ -69,6 +69,42 @@
                             <li class="result_text_detail_price">40000</li>
                             <li class="result_text_detail_button"><input type="submit" class="result_text_detail_button"></li>
                         </ul>
+                        <ul class="result_text_list">
+                            <li class="result_text_detail_id">5</li>
+                            <li class="result_text_detail_item">食費</li>
+                            <li class="result_text_detail_price">40000</li>
+                            <li class="result_text_detail_button"><input type="submit" class="result_text_detail_button"></li>
+                        </ul>
+                        <ul class="result_text_list">
+                            <li class="result_text_detail_id">6</li>
+                            <li class="result_text_detail_item">食費</li>
+                            <li class="result_text_detail_price">40000</li>
+                            <li class="result_text_detail_button"><input type="submit" class="result_text_detail_button"></li>
+                        </ul>
+                        <ul class="result_text_list">
+                            <li class="result_text_detail_id">7</li>
+                            <li class="result_text_detail_item">食費</li>
+                            <li class="result_text_detail_price">40000</li>
+                            <li class="result_text_detail_button"><input type="submit" class="result_text_detail_button"></li>
+                        </ul>
+                        <ul class="result_text_list">
+                            <li class="result_text_detail_id">8</li>
+                            <li class="result_text_detail_item">食費</li>
+                            <li class="result_text_detail_price">40000</li>
+                            <li class="result_text_detail_button"><input type="submit" class="result_text_detail_button"></li>
+                        </ul>
+                        <ul class="result_text_list">
+                            <li class="result_text_detail_id">9</li>
+                            <li class="result_text_detail_item">食費</li>
+                            <li class="result_text_detail_price">40000</li>
+                            <li class="result_text_detail_button"><input type="submit" class="result_text_detail_button"></li>
+                        </ul>
+                        <ul class="result_text_list">
+                            <li class="result_text_detail_id">10</li>
+                            <li class="result_text_detail_item">食費</li>
+                            <li class="result_text_detail_price">40000</li>
+                            <li class="result_text_detail_button"><input type="submit" class="result_text_detail_button"></li>
+                        </ul>
             </div>
         </section>
     </main>
@@ -78,18 +114,19 @@
 
 <?php
 
-    if(!empty($_POST['title' || 'price' || 'memo'])){
-        $category_clm  = 'INSERT INTO items(category) VALUES(:CATE)';
-        $price_clm  = 'INSERT INTO items(price) VALUES(:PRI)';
-        $note_clm  = 'INSERT INTO items(note) VALUES(:N)';
+//TODO
 
-        $stmt = $dbh->prepare($sql);
+// if(!empty($_POST['category'])){
+//     try{
+//       $sql  = 'INSERT INTO items(category) VALUES(:ONAMAE)';
+//       $stmt = $dbh->prepare($sql);
 
-        $stmt->bindParam(':ONAMAE', $_POST['inputName'], PDO::PARAM_STR);
-        $stmt->execute();
+//       $stmt->bindParam(':ONAMAE', $_POST['category'], PDO::PARAM_STR);
+//       $stmt->execute();
 
-        header('location: http://localhost:8888/');
-    }
-
-    $mysqli = new mysqli("localhost", "root", "root", "expenses_app");
-    echo $mysqli->host_info . "\n";
+//       header('location: http://localhost:8888/');
+//       exit();
+//     } catch (PDOException $e) {
+//         echo 'データベースにアクセスできません！'.$e->getMessage();
+//     }
+//   }
