@@ -10,7 +10,7 @@
 <!--ヘッダー-->
 <header>
     <div class="header_content">
-        <h1 class="header_text">expenses book</h1>
+        <h1 class="header_text">家計簿</h1>
     </div>
 </header>
     <!--項目、金額入力-->
@@ -36,10 +36,10 @@
             </div>
         </section>
         <!--登録した最新10件を表示-->
+        <!-- ここで最新10件表示の所はtableタグで表現？ -->
         <section>
             <div class="result_list">
                 <h1 class="result">最新の10件</h1>
-                    <div class="result_title_header"></div>
                         <ul class="result_title_list">
                             <li class="result_title_detail_id">＃</li>
                             <li class="result_title_detail_item">項目</li>
@@ -49,60 +49,6 @@
                             <li class="result_text_detail_id">1</li>
                             <li class="result_text_detail_item">食費</li>
                             <li class="result_text_detail_price">10000</li>
-                            <li class="result_text_detail_button"><input type="submit" class="result_text_detail_button"></li>
-                        </ul>
-                        <ul class="result_text_list">
-                            <li class="result_text_detail_id">2</li>
-                            <li class="result_text_detail_item">食費</li>
-                            <li class="result_text_detail_price">20000</li>
-                            <li class="result_text_detail_button"><input type="submit" class="result_text_detail_button"></li>
-                        </ul>
-                        <ul class="result_text_list">
-                            <li class="result_text_detail_id">3</li>
-                            <li class="result_text_detail_item">食費</li>
-                            <li class="result_text_detail_price">30000</li>
-                            <li class="result_text_detail_button"><input type="submit" class="result_text_detail_button"></li>
-                        </ul>
-                        <ul class="result_text_list">
-                            <li class="result_text_detail_id">4</li>
-                            <li class="result_text_detail_item">食費</li>
-                            <li class="result_text_detail_price">40000</li>
-                            <li class="result_text_detail_button"><input type="submit" class="result_text_detail_button"></li>
-                        </ul>
-                        <ul class="result_text_list">
-                            <li class="result_text_detail_id">5</li>
-                            <li class="result_text_detail_item">食費</li>
-                            <li class="result_text_detail_price">40000</li>
-                            <li class="result_text_detail_button"><input type="submit" class="result_text_detail_button"></li>
-                        </ul>
-                        <ul class="result_text_list">
-                            <li class="result_text_detail_id">6</li>
-                            <li class="result_text_detail_item">食費</li>
-                            <li class="result_text_detail_price">40000</li>
-                            <li class="result_text_detail_button"><input type="submit" class="result_text_detail_button"></li>
-                        </ul>
-                        <ul class="result_text_list">
-                            <li class="result_text_detail_id">7</li>
-                            <li class="result_text_detail_item">食費</li>
-                            <li class="result_text_detail_price">40000</li>
-                            <li class="result_text_detail_button"><input type="submit" class="result_text_detail_button"></li>
-                        </ul>
-                        <ul class="result_text_list">
-                            <li class="result_text_detail_id">8</li>
-                            <li class="result_text_detail_item">食費</li>
-                            <li class="result_text_detail_price">40000</li>
-                            <li class="result_text_detail_button"><input type="submit" class="result_text_detail_button"></li>
-                        </ul>
-                        <ul class="result_text_list">
-                            <li class="result_text_detail_id">9</li>
-                            <li class="result_text_detail_item">食費</li>
-                            <li class="result_text_detail_price">40000</li>
-                            <li class="result_text_detail_button"><input type="submit" class="result_text_detail_button"></li>
-                        </ul>
-                        <ul class="result_text_list">
-                            <li class="result_text_detail_id">10</li>
-                            <li class="result_text_detail_item">食費</li>
-                            <li class="result_text_detail_price">40000</li>
                             <li class="result_text_detail_button"><input type="submit" class="result_text_detail_button"></li>
                         </ul>
             </div>
